@@ -1,27 +1,28 @@
-#include<iostream> 
-#ifndef Card_h
-#define Card_h
 
+#ifndef Card_h
 #include <iostream>
 #include <string>
- 
- class card {
+ using namespace std;
+ class Card {
+public:
+    //    get number of coin per card 
+    virtual int getCardsPerCoin(int coins) = 0  ; 
 
-//    get number of coin per card 
-virtual int getCardsPerCoin(int coins) = 0  ; 
+    // return the name of the card 
 
-// return the name of the card 
-
-virtual string getName() = 0 ; 
+    virtual string getName() = 0 ; 
 
 
-virtual void print(ostream& out) = 0 ; 
+    virtual void print(ostream& out) = 0 ; 
 
- // print the objet 
- friend ostream& operator<<(ostream& COUT ,Card* card){
+    // print the objet 
+    friend ostream& operator<<(ostream& COUT ,const Card& card){
 
-     COUT << *(card); 
+        COUT << card; 
      return COUT ; 
  }
 }; 
 #endif
+
+  // operator to print the objet
+   

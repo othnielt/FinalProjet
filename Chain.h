@@ -1,6 +1,8 @@
 #include "Chain_Base.h"
 #include <vector>
+#include <vector>
 #include "CardFactory.h"
+using namespace std;
 
 
 template<class T> class Chain : public Chain_Base, public vector<T>{
@@ -20,11 +22,8 @@ public:
     int getSize();
     // get the current card type 
     string getType();
-
-     print(ostream&) const = 0;
-
-     string types ; 
-
+    string types ; 
+     
      void print(ostream& COUT) const {
 		COUT << (*this);
 	};
@@ -35,9 +34,9 @@ public:
 
        const  string erreur () const throw (){
 
-           return "the type of the card does not match  with the chaine "
+           return "the type of the card does not match  with the chaine ";
        }
-    }
+    }; 
 
 
 
@@ -46,4 +45,4 @@ public:
 
 
 
-}
+};

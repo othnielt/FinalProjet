@@ -1,8 +1,11 @@
 #include "Card.h"
+#include "iostream"
+using namespace std;
+
 
 class Chain_Base {
 protected:
-    virtual addCard(Card* card) = 0 ; 
+    virtual void addCard(Card* card)  = 0 ; 
     virtual void print(ostream&) const = 0;
 
  public:   
@@ -13,7 +16,7 @@ protected:
      
      // operator to print the objet
     friend ostream& operator << (ostream& COUT, const Card* card) {
-		    COUT << (*c);
+		    COUT << (*card);
 		    return COUT;
 	};
 
