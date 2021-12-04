@@ -2,14 +2,14 @@
 #include <string>
 #include <iostream>
 
-//back est la premiere carte 
-//size - position pour avoir la position
+//back est la première carte 
+//size - pour avoir la position
 
 Hand& Hand ::operator+=(Card*cardToAdd) {  
 	(*this).insert(begin(), cardToAdd);
 	return *this;
 
-}//a joute une carte derrière la dernière carte de la main.
+}//ici on ajoute une carte derrière la dernière carte de la main.
 
 Card* Hand :: play() {
 
@@ -17,22 +17,22 @@ Card* Hand :: play() {
 	(*this).pop_back();
 	return temp;
 
-}//renvoie et supprime la première carte de la main du joueur .
+}//on renvoie et on supprime la première carte de la main du joueur .
 
 Card* Hand ::top() {
 	return (*this).back();
-}//renvoie mais ne supprime pas la première carte de la main du joueur.
+}//on renvoie mais on ne supprime pas la première carte de la main du joueur.
 
 Card* Hand ::operator[](int position) {
 	Card* temp = (*this).at((*this).size() - position);
 	(*this).erase( (*this).begin() + ((*this).size()-position) );
 	return temp;
-}//renvoie et supprime une carte à une position donnée.
+}//on renvoie et on supprime une carte à une position donnée.
 
 
 Hand:: Hand(std::istream& in, CardFactory* cf) {
 	char cardType[256];
-	in.getline(cardType, 256); ///dummy
+	in.getline(cardType, 256); 
 	in.getline(cardType, 256);
 
 	int cnt = 0;
@@ -48,10 +48,6 @@ Hand:: Hand(std::istream& in, CardFactory* cf) {
 }													
 
 
- /*
- Text File Format:
- Line 1: Char for each card
- */
 ostream & operator<<(ostream & out, Hand h)
 {
 	// TODO: make sure cards are in order
