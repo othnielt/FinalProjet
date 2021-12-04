@@ -26,10 +26,6 @@ Deck::Deck(CardFactory* cf)
 }
 
 
-/*
-Text File Format:
-Line 1: Char for each card
-*/
 
 ostream & operator<<(ostream & out, Deck d) {
 	for (vector<Card*>::iterator it = d.begin(); it != d.end(); it++) {
