@@ -1,10 +1,9 @@
 #include "DiscardPile.h"
 
-//Top card is the back of the vector.
 
 DiscardPile::DiscardPile()
 {
-	//empty Discard pile
+	//la DiscardPile est vide
 }
 
 DiscardPile::~DiscardPile()
@@ -43,12 +42,8 @@ bool DiscardPile::isEmpty()
 }
 
 
-/*
-Text File Format:
-Line 1: Char for each card in discard
-*/
 
-void DiscardPile::print(ostream & out)				//print all cards
+void DiscardPile::print(ostream & out)				//on imprime toutes les cartes
 {
 	if (!isEmpty()) {
 		for (vector<Card*>::iterator it = this->begin(); it != this->end(); it++) {
@@ -59,7 +54,7 @@ void DiscardPile::print(ostream & out)				//print all cards
 		out << "Discard pile is empty";*/
 }
 
-DiscardPile::DiscardPile(istream & in, CardFactory *cf)		//deleted the const adapt method otherwise
+DiscardPile::DiscardPile(istream & in, CardFactory *cf)		// sinon supprimé la méthode const adapt
 {
 	char cardType[256];
 	in.getline(cardType, 256);
