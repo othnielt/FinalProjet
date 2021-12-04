@@ -5,17 +5,17 @@
  using namespace std;
  class Card {
 public:
-    //    get number of coin per card 
+    //  on obtient le nombre de pièces par carte
     virtual int getCardsPerCoin(int coins) = 0  ; 
 
-    // return the name of the card 
+    // on retourne le nom de la carte 
 
     virtual string getName() = 0 ; 
 
 
     virtual void print(ostream& out) = 0 ; 
 
-    // print the objet 
+    // on imprime l'objet
     friend ostream& operator<<(ostream& COUT ,const Card& card){
 
         COUT << card; 
@@ -24,5 +24,4 @@ public:
 }; 
 #endif
 
-  // operator to print the objet
    
