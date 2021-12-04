@@ -19,6 +19,7 @@ Table::~Table()
 bool Table::win(string & name)
 {
 	//If there is no player, returns the player in the lead.
+	// S'il n y a plus de joeurs, on retourne le joueur en tête
 	if (players[0].getNumCoins() > players[1].getNumCoins())
 		name = players[0].getName();
 	else
@@ -40,14 +41,6 @@ Table::Table(istream & in, CardFactory* cf)
 
 }
 
-
-/*
-Text File Format:
-Line 1: player 1 info
-Line 2: player 2 info
-Line 3: discard pile info
-Line 4: trading area info
-*/
 
 ostream & operator<<(ostream & out, Table t)
 {
