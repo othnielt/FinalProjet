@@ -1,6 +1,6 @@
 #include "Player.h"
 
-Player:: Player(string &playerName) {											//quoi faire avec la reference
+Player:: Player(string &playerName) {											
 	name = playerName;
 	numCoins = 0;
 	maxNumChains = 2;
@@ -44,7 +44,7 @@ int Player::getNumChains() {
 		 throw ChainDoesntExist();
 }
 
-//On assume qu'un joueur a seulement besoins d'acheter une troisième chaine 1 fois.
+//On assume que seulement un joueur a besoin d'acheter une troisième chaine 1 fois.
 void Player:: buyThirdChain() {
 	if (numCoins < 3)
 		throw NotEnoughCoins();
@@ -66,9 +66,9 @@ void Player::printHand(ostream& out, bool notTopCard) {
 	}
 																					
 
-}//prints the top card of the player's hand (with
-								//argument false) or all of the player's hand (with 
-								//argument true) to the supplied ostream.
+}// on imprime la carte du dessus de la main du joueur (avec
+// argument false) ou toute la main du joueur (avec
+// argument true) à l'ostream fourni.
 
 
 Player:: Player(istream& in, CardFactory* cf) {
@@ -174,14 +174,6 @@ void Player::addChain(char type)
 }
 
 
-//constructor that accepts an istream and reconstruct the Player from file
- /*
- Text File Format:
- Line 1: name /t nb of coins
- Line 2: chain 1 info  **if not null
- Line 3: chain 2 info  **if not null
- Line 4: chain 3 info  **if not null
- */
 
 ostream & operator<<(ostream & out, Player p)
 {
@@ -191,7 +183,7 @@ ostream & operator<<(ostream & out, Player p)
 	return out;
 }
 
-void Player::print(ostream & out)				//print all cards
+void Player::print(ostream & out)				//on imprime toutes les cartes
 {	
 	//addChain<Quartz>();
 	//addToChain(new Quartz());
