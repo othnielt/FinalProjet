@@ -52,7 +52,7 @@ CardFactory * CardFactory::getFactory()
 	return &cf;
 }
 
-Deck CardFactory::setDeck(istream &in)		//when a game is loaded
+Deck CardFactory::setDeck(istream &in)		// ici c'est quand un jeu est chargé
 {
 	deck = new Deck();
 	char cardType[256];
@@ -70,7 +70,7 @@ Deck CardFactory::setDeck(istream &in)		//when a game is loaded
 
 Deck CardFactory::getDeck()
 {
-	// obtain a time-based seed -- source: cplusplus.com/reference/algorithm/shuffle/
+
 	unsigned seed = chrono::system_clock::now().time_since_epoch().count();
 	shuffle(deck->begin(), deck->end(), default_random_engine(seed));
 
@@ -78,7 +78,7 @@ Deck CardFactory::getDeck()
 }
 
 
-Card* CardFactory::getCard(char type) {  //used when we create Deck
+Card* CardFactory::getCard(char type) {  // on l'utilise lorsqu'on crée Deck
 	Card * newCard = NULL;
 
 	if (type == 'Q') {
