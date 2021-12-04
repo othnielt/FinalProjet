@@ -1,6 +1,6 @@
 #include "TradeArea.h"
 
-//Helper function
+
 template <typename Container>
 bool contains(Container const& c, typename Container::const_reference v) {
 	return std::find(c.begin(), c.end(), v) != c.end();
@@ -35,9 +35,9 @@ TradeArea::TradeArea()
 
 TradeArea::~TradeArea()
 {/*
-	//Make sure that each card is deleted.
+	//S'assurer que chaque carte est supprimée
 	for (auto&& card : *cards){
-		delete card;
+		supprime carte;
 	}
 	cards->clear();
 	cardTypes.clear();*/
@@ -81,7 +81,7 @@ Card * TradeArea::trade(string name)
 		}
 		it++;
 	}
-	//If there is no card of that type:
+	//S'il n y a pas de carte de ce type:
 	return nullptr;
 }
 
@@ -112,7 +112,7 @@ TradeArea::TradeArea(istream & in, CardFactory *cf)
 
 string TradeArea::getCardType(int i)
 {
-	//if i < 0 return first, and if i > size return last.
+	//if i < 0 on retourne first, and if i > size on retourne  last.
 	list<string>::iterator it = cardTypes.begin();
 	while (i > 0 && it != cardTypes.end()) {
 		it++;
@@ -122,10 +122,6 @@ string TradeArea::getCardType(int i)
 	return *it;
 }
 
-/*
-Text File Format:
-Line 1: Char for each card
-*/
 
 ostream & operator<<(ostream & out, TradeArea ta)
 {
