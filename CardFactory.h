@@ -7,14 +7,14 @@
 #include <chrono>
 #include "Deck.h"
 #include "Card.h"
-#include "Amethyst.cpp"
-#include "Emerald.cpp"
-#include "Hematite.cpp"
-#include "Malachite.cpp"
-#include "Obsidian.cpp"
-#include "Quartz.cpp"
-#include "Ruby.cpp"
-#include "Turquoise.cpp"
+#include "Blue.cpp"
+#include "Chili.cpp"
+#include "Stink.cpp"
+#include "Green.cpp"
+#include "Soy.cpp"
+#include "Black.cpp"
+#include "Red.cpp"
+#include "Garden.cpp"
 
 class Deck;
 
