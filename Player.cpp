@@ -139,36 +139,36 @@ void Player::sellChain(int i){
 
 void Player::addChain(char type)
 {
-	if (type == 'Q') {
-		ChainBase* newChain = new Chain<Quartz>;
+	if (type == 'B') {
+		ChainBase* newChain = new Chain<Blue>;
 		chains.addChain(newChain);
 	}
-	else if (type == 'H') {
-		ChainBase* newChain = new Chain<Hematite>;
+	else if (type == 'C') {
+		ChainBase* newChain = new Chain<Chili>;
 		chains.addChain(newChain);
 	}
-	else if (type == 'O') {
-		ChainBase* newChain = new Chain<Obsidian>;
+	else if (type == 'S') {
+		ChainBase* newChain = new Chain<Stink>;
 		chains.addChain(newChain);
 	}
-	else if (type == 'M') {
-		ChainBase* newChain = new Chain<Malachite>;
+	else if (type == 'G') {
+		ChainBase* newChain = new Chain<Green>;
 		chains.addChain(newChain);
 	}
-	else if (type == 'T') {
-		ChainBase* newChain = new Chain<Turquoise>;
+	else if (type == 'So') {
+		ChainBase* newChain = new Chain<Soy>;
+		chains.addChain(newChain);
+	}
+	else if (type == 'Bk') {
+		ChainBase* newChain = new Chain<Black>;
 		chains.addChain(newChain);
 	}
 	else if (type == 'R') {
-		ChainBase* newChain = new Chain<Ruby>;
+		ChainBase* newChain = new Chain<Red>;
 		chains.addChain(newChain);
 	}
-	else if (type == 'A') {
-		ChainBase* newChain = new Chain<Amethyst>;
-		chains.addChain(newChain);
-	}
-	else if (type == 'E') {
-		ChainBase* newChain = new Chain<Emerald>;
+	else if (type == 'Ga') {
+		ChainBase* newChain = new Chain<Garden>;
 		chains.addChain(newChain);
 	}
 }
